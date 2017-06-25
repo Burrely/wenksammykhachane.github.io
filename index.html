@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sammy Khachane's Project Pagina!</title>
+    
+    <link rel="stylesheet" type="text/css" href="Assets/stylesheet.css"/>
+    <script></script>
+    
+    <!--  -->
+    <script src="Assets/Scripts/HTMLContentController.js" defer="defer"></script>
+
+    <!-- Particle system script -->
+    <script type="text/javascript" src="Assets/Scripts/Particle.js" defer="defer"> </script>
+	<script type="text/javascript" src="Assets/Scripts/Particle system.js" defer="defer"> </script>
+    
+    <!-- External libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js"></script>
+    
+</head>
+
+<body style="background-color: black; margin: 0px">
+
+    <!-- Intro -->
+
+    <div id="introSection" class="sectionArea" style="background-color:#FF7200">
+        <div class="innerSectionArea" style="background-color:#FF5300">
+
+            <!-- Particle background -->
+            <canvas id="ParticleCanvas" style="width:100%; height:100%; position:absolute; top:0px"></canvas>
+            
+            <div style="position: absolute; top:0px; width: 100%; height: 100%">
+                <div style="position:relative">
+                    <h1 style="padding-top: 160px">Welkom!</h1>
+                    <h2 style="padding-top: 20px">
+                        Welkom op mijn persoonlijke project pagina!<br>
+                        Mijn naam is Sammy Khachane en op deze pagina laat ik mijn werk in<br>
+                        het Wouter en Klaasje project zien!<br>
+                        <br>
+                        Scroll naar beneden om te kijken naar mijn werk<br>
+                        of klik op een van de navigatie knoppen om naar de onderwerpen te gaan!
+                    </h2>
+                </div>
+                
+                <img src="Assets/Images/Down arrow.png" onclick="TweenLite.to(window, 2, {scrollTo:'#productSelectionSection'});" style="width:80px; height:100px; position:absolute; bottom:10px; margin-left: auto; margin-right: auto; left:0px; right:0px; cursor: pointer; opacity:0.5"/>
+            </div>
+
+        </div>
+    </div>
+        
+
+    <!-- Product selection -->
+
+    <div id="productSelectionSection" class="sectionArea" style="background-color:#8DDD00">
+        <div class="innerSectionArea" style="background-color:#A3EE3F">
+
+            <h1 style="padding-top: 160px; padding-bottom: 60px">Producten</h1>
+            
+            <center>
+                <div class="ghostButton" style="margin-right:20px;">
+                    <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productDescriptionSection'}); SetContent(1)" class="navigationText">Object spel</h2>
+                </div>
+                <div class="ghostButton">
+                    <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productDescriptionSection'}); SetContent(2)" class="navigationText">Woorden flits</h2>
+                </div>
+                <div class="ghostButton" style="margin-left:20px">
+                    <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productDescriptionSection'}); SetContent(3)" class="navigationText">Interactief huis</h2>
+                </div>
+            </center>
+
+        </div>
+    </div>
+
+
+    <!-- Product image -->
+
+    <div id="productImageSection" class="sectionArea" style="background-color:#FFCE00">
+        <div class="innerSectionArea" style="background-color:#FAFA3C">
+            <center>
+                <img id="ImageDisplay" style="position:relative; width: 80%; height: calc(80%/16*9); margin-top:calc(8%/16*9); background-color: #FC3D31"/>
+            </center>
+        </div>
+    </div>
+    
+
+    <!-- Product description -->
+
+    <div id="productDescriptionSection" class="sectionArea" style="background-color:#FC3D31">
+        <div id="ProductDescriptionDiv" class="innerSectionArea" style="background-color:#FF475C">
+            
+        </div>
+    </div>
+
+
+    <!-- Navigation buttons -->
+
+    <center style="position: fixed; top: -6px; width: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+
+        <div class="ghostButton">
+            <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#introSection'});" class="navigationText">Intro</h2>
+        </div>
+        <div class="ghostButton">
+            <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productSelectionSection'});" class="navigationText">Product selectie</h2>
+        </div>
+            <div class="ghostButton">
+        <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productImageSection'});" class="navigationText">Product afbeelding</h2>
+        </div>
+            <div class="ghostButton">
+        <h2 onclick="TweenLite.to(window, 2, {scrollTo:'#productDescriptionSection'});" class="navigationText">Product informatie</h2>
+        </div>
+    </center>
+
+
+    <!-- Hidden material for scripts -->
+
+    <div hidden>
+        <img id="Picture1" src="Assets/Images/Objecten spel screenshot.jpg"/>
+        <img id="Picture2" src="Assets/Images/Wordflash screenshot.jpg"/>
+        <img id="Picture3" src="Assets/Images/Interactief huis screenshot.jpg"/>
+        <!-- -->
+        <div id="Description1">
+            <h1 style="padding-top: 160px">Object spel:</h1>
+            <h2>
+                Het doel van dit spel wat om kinderen te leren lezen door ze<br>
+                woorden te laten lezen en dan het juiste object aan te laten klikken.<br>
+                <br>
+                Ik heb dit aangepakt door objecten te maken die beide een afbeelding hebben<br>
+                en een text, deze heb ik samen in een lijst gezet die je via de editor<br>
+                makkelijk zou kunnen aanpassen.<br>
+                <br>
+                Het script zelf is op de panel gezet waar het spel zich op afspeelt.<br>
+                De klikbare knoppen staan in een lijst en wordt bestuurd door het ditzelfde script.<br>
+                <br>
+                <a href="Assets/Downloadable assets/ObjectGame.cs" download>Download script hier</a>
+            </h2>
+        </div>
+        <!-- -->
+        <div id="Description2">
+            <h1 style="padding-top: 160px">Woorden flits:</h1>
+            <h2>
+                Het doel van de woordenflits is om kinderen de tekst te laten lezen<br>
+                en onthoudenomdat nadat de flits,<br>
+                ze de knop moeten kiezen met de tekst van het eerder vertoonde woord.<br>
+                <br>
+                Ik heb dit aangepakt door een lijst van woorden te maken.<br>
+                Van deze lijst worden drie willekeurige woorden gepakt<br>
+                en een van deze woorden wordt het woord dat geflitst wordt. Dit is ook het antwoord.<br>
+                <br>
+                Het script staat op het panel zelf en de UI elementen worden gebruikt door het script.<br>
+                <br>
+                <a href="Assets/Downloadable assets/Wordflash.cs" download>Download script hier</a>
+            </h2>
+        </div>
+        <!-- -->
+        <div id="Description3">
+            <h1 style="padding-top: 160px">Interactief huis:</h1>
+            <h2>
+                Het doel van het interactieve huis is dat kinderen kunnen rondkijken door Wouter's huis<br>
+                om interessante dingetjes te vinden over Wouter.<br>
+                <br>
+                Zo kun je op objecten klikken om er meer informatie over te krijgen.<br>
+                Deze informatie wordt gegeven in de vorm van een zin.<br>
+                De zin zal complexer zijn als het leerjaar van de kinderen hoger is<br>
+                Om een verschil te maken in het leesniveau van hen.<br>
+                <br>
+                Het script is op alle objecten gezet die een descriptie hebben en klikbaar zijn.<br>
+                De objecten hebben allemaal een eigen text en een referentie naar het object waar ze de<br>
+                text op moeten laten zien.<br>
+                <br>
+                <a href="Assets/Downloadable assets/InteractiveFurniture.cs" download>Download script hier</a>
+            </h2>
+        </div>
+    <div>
+
+</body>
+
+</html>

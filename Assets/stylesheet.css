@@ -1,0 +1,83 @@
+h1,h2,h3,h4,h5,h6,span,section {
+    text-align: center;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2.navigationText {
+    position:relative;
+    width: 260px;
+    display:inline-block;
+    margin-bottom: 6px;
+    margin-top: 2px;
+}
+
+div.sectionArea {
+    position:absolute;
+    left: 0px;
+    right: 0px;
+    height:100vh;
+}
+
+div.ghostButton {
+    position:relative;
+    display:inline-block;
+    border: 3px solid rgba(255,255,255,0.5);
+    top: 10px;
+    border-radius: 6px;
+    transition-duration: 0.35s;
+    cursor: pointer;
+    color: rgba(255,255,255,0.75);
+}
+
+div.ghostButton:hover {
+    background-color: rgba(255,255,255,0.25);
+    border: 3px solid rgba(255,255,255,0.75);
+    color: white;
+}
+
+#productIntroSection {
+    top: 0vh;
+}
+
+#productSelectionSection {
+    top: 100vh;
+}
+
+#productImageSection {
+    top: 200vh;
+}
+
+#productDescriptionSection {
+    top: 300vh;
+}
+
+div.innerSectionArea {
+    position: relative;
+    float: top;
+    display: block;
+    width: calc(100% - 160px);
+    left:80px;
+    height:100%
+}
+
+div.navigationButton {
+    position:relative;
+    width: 260px;
+}
+
+a:link {
+    color: #D21034
+}
+
+a:visited {
+    color: #D21034;
+}
+
+a:hover {
+    color: #D21034;
+}
+
+a:active {
+    color: #D21034;
+}
